@@ -1,6 +1,7 @@
 import React from 'react';
 import {useTranslation} from 'react-i18next';
 import {SafeAreaView, Text, TouchableOpacity} from 'react-native';
+import {MainButton} from './src/components/MainButton/MainButton';
 
 function App(): React.JSX.Element {
   const {t, i18n} = useTranslation();
@@ -12,10 +13,7 @@ function App(): React.JSX.Element {
   };
   return (
     <SafeAreaView>
-      <Text>{t('word1')}</Text>
-      <TouchableOpacity onPress={changeLanguage}>
-        <Text>{t('word2')}</Text>
-      </TouchableOpacity>
+      <MainButton />
     </SafeAreaView>
   );
 }
