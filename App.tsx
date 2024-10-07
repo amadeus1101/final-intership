@@ -1,5 +1,7 @@
 import React from 'react';
 import {Home} from './src/screens/Home/Home';
+import {SignIn} from './src/screens/SignIn/SignIn';
+import SignUp from './src/screens/SignUp';
 
 function App(): React.JSX.Element {
   // const {t, i18n} = useTranslation();
@@ -9,7 +11,7 @@ function App(): React.JSX.Element {
   //     i18n.changeLanguage('ru');
   //   } else i18n.changeLanguage('en');
   // };
-  return <Home />;
+  return <SignUp />;
 }
 
 export default App;

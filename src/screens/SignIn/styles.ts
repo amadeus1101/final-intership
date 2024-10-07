@@ -4,29 +4,24 @@ import {TextSize} from '../../constants/TextSizes';
 
 export const styles = StyleSheet.create({
   container: {
-    paddingVertical: '5%',
-    width: '100%',
+    flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor: Colors.black_black,
   },
-  touchable: {
-    width: '90%',
-    paddingBottom: '2%',
-    borderRadius: 10,
-    backgroundColor: Colors.red_shadow,
-  },
-  button: {
-    paddingVertical: '4%',
-    justifyContent: 'center',
+  form: {
     alignItems: 'center',
-    borderRadius: 10,
-    backgroundColor: Colors.red,
   },
-  text: {
-    fontSize: TextSize.regular,
-    letterSpacing: 1,
+  title: {
+    marginBottom: '4%',
+    padding: '1%',
+    fontSize: TextSize.large,
     color: Colors.white,
     fontFamily: 'Ubuntu-Bold',
+    textAlign: 'center',
+    textTransform: 'capitalize',
+    borderBottomWidth: 4,
+    borderBottomColor: Colors.grey_dark,
   },
 });

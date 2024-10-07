@@ -1,5 +1,7 @@
 {
   "welcome": "welcome",
+  "login": "login",
+  "password": "password",
   "home": "home",
   "returnSignIn": "OR Back to SignIn",
   "returnSignUp": "New to React Chess? Click to SignUp",

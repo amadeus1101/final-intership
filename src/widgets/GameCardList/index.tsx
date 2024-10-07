@@ -6,7 +6,7 @@ import {styles} from './styles';
 const GameCardList = () => {
   return (
     <FlatList
-      data={[1, 2, 3, 4, 5, 6, 7, 8]}
+      data={[1, 2, 3, 4, 5, 6]}
       contentContainerStyle={styles.list}
       renderItem={({item}) => <GameCard />}
     />
