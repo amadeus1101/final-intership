@@ -1,0 +1,30 @@
+------components------
+* board
+* game mini
+* profile mini
+* modal
+* button
+* input
+* header
+* player in game + clock
+* banner
+* menu mini
+* moves history bar
+* mode chooser button
+-----widgets------
+gameList
+-----screens------
+- home
+- signin
+- signup
+- profile
+- settings
+- game
+- game settings
+- appearance (theme language colors)
+? rating
+? chat
+----nav-----
+top bar 
+bottom tab 
+drawer
