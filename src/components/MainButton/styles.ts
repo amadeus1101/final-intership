@@ -4,7 +4,11 @@ import {TextSize} from '../../constants/TextSizes';
 
 export const styles = StyleSheet.create({
   container: {
+    position: 'absolute',
+    left: 0,
+    bottom: 0,
     paddingVertical: '5%',
+    width: '100%',
     flexDirection: 'row',
     justifyContent: 'center',
     backgroundColor: Colors.black_black,
