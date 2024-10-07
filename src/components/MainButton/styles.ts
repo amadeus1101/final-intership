@@ -4,10 +4,10 @@ import {TextSize} from '../../constants/TextSizes';
 
 export const styles = StyleSheet.create({
   container: {
-    paddingVertical: 20,
+    paddingVertical: '5%',
     flexDirection: 'row',
     justifyContent: 'center',
-    backgroundColor: '#d9d9d9',
+    backgroundColor: Colors.black_black,
   },
   touchable: {
     width: '75%',
