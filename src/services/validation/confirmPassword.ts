@@ -1,3 +1,3 @@
-export function confirmPassword() {
-  return true;
+export function confirmPassword(password: string, repPassword: string) {
+  return password === repPassword;
 }

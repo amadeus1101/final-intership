@@ -8,7 +8,7 @@ type AlertProps = {
   callback: () => void;
 };
 
-const Alert: React.FC<AlertProps> = ({content, link, callback}) => {
+const AuthLink: React.FC<AlertProps> = ({content, link, callback}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>{content + ' '}</Text>
@@ -19,4 +19,4 @@ const Alert: React.FC<AlertProps> = ({content, link, callback}) => {
   );
 };
 
-export default Alert;
+export default AuthLink;

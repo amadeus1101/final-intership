@@ -16,6 +16,7 @@ export const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: Colors.red_shadow,
   },
+
   button: {
     paddingVertical: '4%',
     justifyContent: 'center',
@@ -23,6 +24,7 @@ export const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: Colors.red,
   },
+
   text: {
     fontSize: TextSize.regular,
     letterSpacing: 1,

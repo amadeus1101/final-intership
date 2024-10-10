@@ -6,30 +6,20 @@ import {Colors} from '../../constants/Colors';
 type InputProps = {
   placeholder: string;
   isSecret: boolean;
-  matchInput: (value: string) => boolean;
 };
 
-const Input: React.FC<InputProps> = ({placeholder, matchInput, isSecret}) => {
+const Input: React.FC<InputProps> = ({placeholder}) => {
   const [inputValue, setInputValue] = useState('');
-  const [isInputInvalid, setInputInvalid] = useState(false);
 
-  const onUseInput = (text: string) => {
-    matchInput(text) ? setInputInvalid(false) : setInputInvalid(true);
-    setInputValue(text);
-  };
   return (
     <View style={styles.container}>
-      {isInputInvalid && <Text style={styles.label}>{isInputInvalid}</Text>}
+      {<Text style={styles.label}>Use only A-Z and 0-9 and less than 10</Text>}
       <TextInput
-        keyboardType="visible-password"
         value={inputValue}
-        onChangeText={text => onUseInput(text)}
-        style={
-          isInputInvalid ? [styles.input, styles.inputOutlined] : styles.input
-        }
+        onChangeText={setInputValue}
+        style={styles.input}
         placeholder={placeholder}
         placeholderTextColor={Colors.grey_dark}
-        secureTextEntry={isSecret}
       />
     </View>
   );
