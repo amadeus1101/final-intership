@@ -13,15 +13,4 @@ export const styles = StyleSheet.create({
   form: {
     alignItems: 'center',
   },
-  title: {
-    marginBottom: '4%',
-    padding: '1%',
-    fontSize: TextSize.large,
-    color: Colors.white,
-    fontFamily: 'Ubuntu-Bold',
-    textAlign: 'center',
-    textTransform: 'capitalize',
-    borderBottomWidth: 4,
-    borderBottomColor: Colors.grey_dark,
-  },
 });
