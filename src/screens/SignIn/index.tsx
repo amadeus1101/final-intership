@@ -6,6 +6,7 @@ import {styles} from './styles';
 import {useTranslation} from 'react-i18next';
 import Header from '../../components/Header';
 import Alert from '../../components/Alert';
+import {validateInput} from '../../services/validation/validateInput';
 
 const SignIn = () => {
   const {t} = useTranslation();
@@ -13,8 +14,16 @@ const SignIn = () => {
     <SafeAreaView style={styles.container}>
       <KeyboardAvoidingView style={styles.form}>
         <Header>{t('welcome')}</Header>
-        <Input content={t('login')} />
-        <Input content={t('password')} />
+        <Input
+          placeholder={t('login')}
+          matchInput={validateInput}
+          isSecret={false}
+        />
+        <Input
+          placeholder={t('password')}
+          matchInput={validateInput}
+          isSecret={false}
+        />
         <MainButton content={t('buttonSignIn')} />
         <Alert
           content={t('returnSignUp')}
