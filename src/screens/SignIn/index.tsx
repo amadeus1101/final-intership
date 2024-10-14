@@ -14,17 +14,9 @@ const SignIn = () => {
     <SafeAreaView style={styles.container}>
       <KeyboardAvoidingView style={styles.form}>
         <Header>{t('welcome')}</Header>
-        <Input
-          placeholder={t('login')}
-          matchInput={validateInput}
-          isSecret={false}
-        />
-        <Input
-          placeholder={t('password')}
-          matchInput={validateInput}
-          isSecret={false}
-        />
-        <MainButton content={t('buttonSignIn')} />
+        <Input placeholder={t('login')} isSecret={false} />
+        <Input placeholder={t('password')} isSecret={false} />
+        <MainButton content={t('buttonSignIn')} active onClick={() => {}} />
         <Alert
           content={t('returnSignUp')}
           link={t('signUp')}

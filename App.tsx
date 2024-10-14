@@ -1,6 +1,6 @@
 import React from 'react';
-import {Home} from './src/screens/Home/Home';
-import {SignIn} from './src/screens/SignIn/SignIn';
+import Home from './src/screens/Home';
+import SignIn from './src/screens/SignIn';
 import SignUp from './src/screens/SignUp';
 
 function App(): React.JSX.Element {

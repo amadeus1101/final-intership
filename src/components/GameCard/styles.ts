@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
     borderWidth: 4,
     borderRadius: 10,
     borderColor: Colors.grey_dark,
-    backgroundColor: Colors.aquamarine,
+    backgroundColor: Colors.grey_light,
   },
   content: {
     justifyContent: 'space-evenly',

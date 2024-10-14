@@ -10,7 +10,7 @@ const GameCardList = () => {
       <FlatList
         data={[1, 2, 3, 4, 5, 6]}
         contentContainerStyle={styles.list}
-        renderItem={({item}) => <GameCardSkeleton />}
+        renderItem={({item}) => <GameCard />}
       />
     </>
   );
