@@ -1,25 +1,22 @@
 import React from 'react';
 import {ImageBackground, SafeAreaView, View} from 'react-native';
-import MainButton from '../../components/MainButton';
 import {background_dark, background_light} from '../../assets/img';
-import GameCardList from '../../widgets/GameCardList';
 import {styles} from './styles';
-import {useTranslation} from 'react-i18next';
+import MovesHistoryBar from '../../components/MovesHistoryBar';
+import PlayerTab from '../../components/PlayerTab';
+import Board from '../../components/Board';
 
-const Home = () => {
-  const {t} = useTranslation();
+const Game = () => {
   return (
     <SafeAreaView style={styles.container}>
+      <MovesHistoryBar />
       <ImageBackground source={background_dark} style={styles.wrapper}>
-        <GameCardList />
-        <MainButton
-          content={t('buttonPlay')}
-          active={true}
-          onClick={() => {}}
-        />
+        <PlayerTab />
+        <Board />
+        <PlayerTab />
       </ImageBackground>
     </SafeAreaView>
   );
 };
 
-export default Home;
+export default Game;
