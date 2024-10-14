@@ -5,14 +5,7 @@ import MainButton from '../../components/MainButton';
 import {styles} from './styles';
 import {useTranslation} from 'react-i18next';
 import Header from '../../components/Header';
-import {
-  validateLogin,
-  validatePassword,
-  confirmPassword,
-  validateInput,
-} from '../../services/validation';
 import AuthLink from '../../components/Alert';
-import {useInput} from '../../hooks/useInput';
 
 const SignUp = () => {
   const {t} = useTranslation();

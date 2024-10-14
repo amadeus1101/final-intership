@@ -11,7 +11,7 @@ function App(): React.JSX.Element {
   //     i18n.changeLanguage('ru');
   //   } else i18n.changeLanguage('en');
   // };
-  return <SignUp />;
+  return <Home />;
 }
 
 export default App;
