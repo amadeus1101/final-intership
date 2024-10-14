@@ -19,7 +19,9 @@ export const styles = StyleSheet.create({
     borderColor: Colors.grey_dark,
     backgroundColor: Colors.grey_light,
   },
-  content: {},
+  content: {
+    marginHorizontal: '2%',
+  },
   content_header: {
     color: Colors.grey_light,
     fontFamily: 'Ubuntu-Medium',

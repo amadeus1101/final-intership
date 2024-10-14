@@ -6,13 +6,13 @@ import GameCardList from '../../widgets/GameCardList';
 import {styles} from './styles';
 import {useTranslation} from 'react-i18next';
 import PlayerTab from '../../components/PlayerTab';
+import MovesHistoryBar from '../../components/MovesHistoryBar';
 
 const Home = () => {
   const {t} = useTranslation();
   return (
     <SafeAreaView style={styles.container}>
       <ImageBackground source={background_dark} style={styles.wrapper}>
-        <PlayerTab />
         <GameCardList />
         <MainButton
           content={t('buttonPlay')}
