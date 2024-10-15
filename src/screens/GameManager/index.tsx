@@ -4,25 +4,43 @@ import Header from '../../components/Header';
 import {useTranslation} from 'react-i18next';
 import ShadowButton from '../../components/ShadowButton';
 import MainButton from '../../components/MainButton';
+import {styles} from './styles';
+import Title from '../../components/Title';
+import SwitchItem from '../../components/SwitchItem';
+import Switcher from '../../widgets/Switcher';
 
 const GameManager = () => {
   const {t} = useTranslation();
   return (
-    <SafeAreaView>
-      <View>{t('gameTitle')}</View>
-      <Header>{t('gameTitle')}</Header>
-      <ShadowButton content="10 min" event={() => {}} />
+    <SafeAreaView style={styles.container}>
       <View>
-        <Text>{t('pieces')}</Text>
+        <View style={styles.preview}></View>
+        <Header>{t('gameTitle')}</Header>
       </View>
       <View>
-        <Text>{t('rating')}</Text>
+        <View style={styles.setting}>
+          <Title>Time</Title>
+          <ShadowButton content="10 min" event={() => {}} />
+        </View>
+        <View style={styles.setting}>
+          <Title>{t('pieces')}</Title>
+          <Switcher
+            mode="background"
+            items={['#ffffff; #ffffff', '#ffffff; #000000', '#000000; #000000']}
+            activeId={1}
+          />
+        </View>
+        <View style={styles.setting}>
+          <Title>{t('rating')}</Title>
+          <ShadowButton content="Yes" event={() => {}} />
+        </View>
+        <View style={styles.setting}>
+          <ShadowButton content="-200" event={() => {}} />
+          <Title>1560</Title>
+          <ShadowButton content="+200" event={() => {}} />
+        </View>
       </View>
-      <View>
-        <ShadowButton content="-200" event={() => {}} />
-        <Text>1560</Text>
-        <ShadowButton content="+200" event={() => {}} />
-      </View>
+
       <MainButton active content={t('buttonPlay')} onClick={() => {}} />
     </SafeAreaView>
   );

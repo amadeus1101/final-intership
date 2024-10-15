@@ -20,6 +20,7 @@ const MovesHistoryBar = () => {
             </Text>
           </View>
         )}
+        keyExtractor={num => num.toString()}
       />
     </View>
   );

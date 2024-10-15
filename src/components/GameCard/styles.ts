@@ -25,11 +25,6 @@ export const styles = StyleSheet.create({
   content: {
     justifyContent: 'space-evenly',
   },
-  title: {
-    color: Colors.white,
-    fontFamily: 'Ubuntu-Bold',
-    fontSize: TextSize.small,
-  },
   subtitle: {
     color: Colors.grey_light,
     fontFamily: 'Ubuntu-Regular',

@@ -11,6 +11,7 @@ const GameCardList = () => {
         data={[1, 2, 3, 4, 5, 6]}
         contentContainerStyle={styles.list}
         renderItem={({item}) => <GameCard />}
+        keyExtractor={num => num.toString()}
       />
     </>
   );
