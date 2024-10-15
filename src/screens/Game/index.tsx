@@ -5,7 +5,6 @@ import {styles} from './styles';
 import MovesHistoryBar from '../../components/MovesHistoryBar';
 import PlayerTab from '../../components/PlayerTab';
 import Board from '../../components/Board';
-import ShadowButton from '../../components/ShadowButton';
 
 const Game = () => {
   return (
@@ -14,12 +13,6 @@ const Game = () => {
 
       <ImageBackground source={background_dark} style={styles.wrapper}>
         <PlayerTab />
-        <View style={{flexDirection: 'row'}}>
-          <ShadowButton />
-          <ShadowButton />
-          <ShadowButton />
-        </View>
-
         <Board />
         <PlayerTab />
       </ImageBackground>

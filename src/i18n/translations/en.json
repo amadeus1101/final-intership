@@ -5,6 +5,8 @@
   "home": "home",
   "signIn": "signIn",
   "signUp": "signUp",
+  "pieces": "Pieces",
+  "rating": "Rating",
   "returnSignIn": "OR Back to",
   "returnSignUp": "New to React Chess? Click to",
   "gameTitle": "Game",
