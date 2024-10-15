@@ -4,7 +4,7 @@ import {TextSize} from '../../constants/TextSizes';
 
 export const styles = StyleSheet.create({
   container: {
-    width: '90%',
+    width: '100%',
     marginVertical: 10,
     padding: '5%',
     flexDirection: 'row',

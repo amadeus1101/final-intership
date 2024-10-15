@@ -1,18 +1,18 @@
 import React from 'react';
-import {SafeAreaView, Text, View} from 'react-native';
+import {View} from 'react-native';
 import Header from '../../components/Header';
 import {useTranslation} from 'react-i18next';
 import ShadowButton from '../../components/ShadowButton';
 import MainButton from '../../components/MainButton';
 import {styles} from './styles';
 import Title from '../../components/Title';
-import SwitchItem from '../../components/SwitchItem';
 import Switcher from '../../widgets/Switcher';
+import Wrapper from '../../components/Wrapper';
 
 const GameManager = () => {
   const {t} = useTranslation();
   return (
-    <SafeAreaView style={styles.container}>
+    <Wrapper>
       <View>
         <View style={styles.preview}></View>
         <Header>{t('gameTitle')}</Header>
@@ -40,9 +40,8 @@ const GameManager = () => {
           <ShadowButton content="+200" event={() => {}} />
         </View>
       </View>
-
       <MainButton active content={t('buttonPlay')} onClick={() => {}} />
-    </SafeAreaView>
+    </Wrapper>
   );
 };
 

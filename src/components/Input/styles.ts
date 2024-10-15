@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
   },
   input: {
     position: 'relative',
-    width: '90%',
+    width: '100%',
     paddingVertical: '3%',
     paddingHorizontal: '4%',
     borderWidth: 2,

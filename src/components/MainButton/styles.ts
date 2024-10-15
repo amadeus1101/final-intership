@@ -8,7 +8,6 @@ export const styles = StyleSheet.create({
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'center',
-    backgroundColor: Colors.black_black,
   },
   touchable: {
     width: '100%',
