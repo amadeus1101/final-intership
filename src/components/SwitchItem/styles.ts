@@ -3,9 +3,12 @@ import {Colors} from '../../constants/Colors';
 
 export const styles = StyleSheet.create({
   container: {
+    flex: 1,
     margin: '2%',
     padding: '2%',
     flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
     borderWidth: 4,
     borderColor: Colors.grey_dark,
     borderRadius: 5,

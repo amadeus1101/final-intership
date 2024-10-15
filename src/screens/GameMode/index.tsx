@@ -9,7 +9,7 @@ import Title from '../../components/Title';
 import Switcher from '../../widgets/Switcher';
 import Wrapper from '../../components/Wrapper';
 
-const GameManager = () => {
+const GameMode = () => {
   const {t} = useTranslation();
   return (
     <Wrapper>
@@ -45,4 +45,4 @@ const GameManager = () => {
   );
 };
 
-export default GameManager;
+export default GameMode;
