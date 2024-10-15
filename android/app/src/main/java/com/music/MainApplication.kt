@@ -1,4 +1,4 @@
-package com.native-chess
+package com.music
 
 import android.app.Application
 import com.facebook.react.PackageList
