@@ -19,7 +19,6 @@ const GameMode = () => {
       </View>
       <View>
         <View style={styles.setting}>
-          <Title>Time</Title>
           <ShadowButton content="10 min" event={() => {}} />
         </View>
         <View style={styles.setting}>

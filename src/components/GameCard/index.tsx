@@ -3,6 +3,7 @@ import {useTranslation} from 'react-i18next';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import {styles} from './styles';
 import Title from '../Title';
+import Subtitle from '../Subtitle';
 
 const GameCard = () => {
   const {t} = useTranslation();
@@ -13,7 +14,7 @@ const GameCard = () => {
       </View>
       <View style={styles.content}>
         <Title>{t('gameTitle') + ' #1'}</Title>
-        <Text style={styles.subtitle}>{t('gameSubtitle')}</Text>
+        <Subtitle>{t('gameSubtitle')}</Subtitle>
         <View style={styles.rating}>
           <View style={styles.rating_icon}></View>
           <Text style={styles.rating_content}>{t('leagueSilver')}</Text>
