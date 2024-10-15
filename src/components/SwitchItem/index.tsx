@@ -34,7 +34,7 @@ const SwitchItem: React.FC<Props> = ({
   }
   return (
     <TouchableWithoutFeedback>
-      <View style={styles.container}>
+      <View style={[styles.container, {flex: 1}]}>
         <Title>{children}</Title>
       </View>
     </TouchableWithoutFeedback>
