@@ -8,9 +8,9 @@ import {Colors} from '../constants/Colors';
 import {background_dark, background_light, home_icon} from '../assets/img';
 import {Button, Image, Text, View} from 'react-native';
 import StackHeader from './components/StackHeader';
-import TabButton from './components/TabButton';
 import TabText from './components/TabText';
 import TabIcon from './components/TabIcon';
+import {useTranslation} from 'react-i18next';
 
 type HomeTabParamList = {
   Home: undefined;
@@ -22,6 +22,7 @@ type HomeTabParamList = {
 const HomeTab = createBottomTabNavigator<HomeTabParamList>();
 
 const HomeTabNavigator = () => {
+  const {t} = useTranslation();
   return (
     <HomeTab.Navigator
       screenOptions={{
@@ -45,8 +46,11 @@ const HomeTabNavigator = () => {
         name="Home"
         component={Home}
         options={{
-          headerTitle: () => (
-            <StackHeader content="Home" icon_url={home_icon} />
+          tabBarLabel: ({focused}) => (
+            <TabText content={t('bottombarHome')} focused={focused} />
+          ),
+          tabBarIcon: ({focused}) => (
+            <TabIcon src={undefined} src_active={undefined} focused={focused} />
           ),
         }}
       />
@@ -55,15 +59,37 @@ const HomeTabNavigator = () => {
         component={Game}
         options={{
           tabBarLabel: ({focused}) => (
-            <TabText content="Puzzle" focused={focused} />
+            <TabText content={t('bottombarPuzzle')} focused={focused} />
           ),
           tabBarIcon: ({focused}) => (
-            <TabIcon src={home_icon} src_active={undefined} focused={focused} />
+            <TabIcon src={undefined} src_active={undefined} focused={focused} />
           ),
         }}
       />
-      <HomeTab.Screen name="Rating" component={Profile} />
-      <HomeTab.Screen name="Settings" component={GameMode} />
+      <HomeTab.Screen
+        name="Rating"
+        component={Profile}
+        options={{
+          tabBarLabel: ({focused}) => (
+            <TabText content={t('bottombarStudy')} focused={focused} />
+          ),
+          tabBarIcon: ({focused}) => (
+            <TabIcon src={undefined} src_active={undefined} focused={focused} />
+          ),
+        }}
+      />
+      <HomeTab.Screen
+        name="Settings"
+        component={GameMode}
+        options={{
+          tabBarLabel: ({focused}) => (
+            <TabText content={t('bottomBarSettings')} focused={focused} />
+          ),
+          tabBarIcon: ({focused}) => (
+            <TabIcon src={undefined} src_active={undefined} focused={focused} />
+          ),
+        }}
+      />
     </HomeTab.Navigator>
   );
 };
