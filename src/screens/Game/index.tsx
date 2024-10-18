@@ -10,7 +10,6 @@ const Game = () => {
   return (
     <SafeAreaView style={styles.container}>
       <MovesHistoryBar />
-
       <ImageBackground source={background_dark} style={styles.wrapper}>
         <PlayerTab />
         <Board />

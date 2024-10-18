@@ -33,8 +33,13 @@ const SwitchItem: React.FC<Props> = ({
     );
   }
   return (
-    <TouchableWithoutFeedback>
-      <View style={[styles.container, {flex: 1}]}>
+    <TouchableWithoutFeedback onPress={() => setActive(id)}>
+      <View
+        style={
+          isActive
+            ? [styles.container, styles.active, {flex: 1}]
+            : [styles.container, {flex: 1}]
+        }>
         <Title>{children}</Title>
       </View>
     </TouchableWithoutFeedback>
