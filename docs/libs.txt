@@ -1,5 +1,0 @@
-1. redux toolkit
-2. navigation
-3. firebase...n.
-4. reanimated
-5. internationalization
