@@ -1,13 +1,8 @@
-import Game from './src/screens/Game';
-import GameMode from './src/screens/GameMode';
-import Home from './src/screens/Home';
-import Profile from './src/screens/Profile';
-import SignIn from './src/screens/SignIn';
-import SignUp from './src/screens/SignUp';
-import TimeMode from './src/screens/TimeMode';
+import React from 'react';
+import RootNavigator from './src/navigation/RootNavigator';
 
-function App(): React.JSX.Element {
-  return <TimeMode />;
-}
+const App = () => {
+  return <RootNavigator />;
+};
 
 export default App;
