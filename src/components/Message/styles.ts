@@ -3,20 +3,22 @@ import {Colors} from '../../constants/Colors';
 import {TextSize} from '../../constants/TextSizes';
 
 export const styles = StyleSheet.create({
-  button: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingVertical: '2%',
-    paddingHorizontal: '8%',
+  modal: {
+    backgroundColor: Colors.dark_black,
     borderWidth: 4,
     borderColor: Colors.grey_dark,
-
-    backgroundColor: Colors.dark_black,
+    borderRadius: 10,
   },
-  text: {
+  content: {
+    padding: '10%',
+  },
+  header: {
     color: Colors.grey_light,
-    fontSize: TextSize.small,
-    fontFamily: 'Ubuntu-Medium',
+    fontFamily: 'Ubuntu-Bold',
+    fontSize: TextSize.medium,
+    textAlign: 'center',
+  },
+  buttons: {
+    flexDirection: 'row',
   },
 });

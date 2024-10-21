@@ -4,23 +4,16 @@ import Subtitle from '../Subtitle';
 import ShadowButton from '../ShadowButton';
 import {useTranslation} from 'react-i18next';
 import {styles} from './styles';
+import Message from '../Message';
 
 const Modal = () => {
   const {t} = useTranslation();
   return (
     <View style={styles.overlay}>
-      <View style={styles.modal}>
-        <Text style={styles.header}>Surrender</Text>
-        <Subtitle>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, ea
-          repellendus? Ullam, rerum. Iure aut, eaque optio nam iste odio quaerat
-          doloribus id officia aspernatur quia est eius blanditiis. Optio!
-        </Subtitle>
-        <View style={styles.buttons}>
-          <ShadowButton content={t('yes')} event={() => {}} />
-          <ShadowButton content={t('no')} event={() => {}} />
-        </View>
-      </View>
+      <Message
+        header="Surrender?"
+        content="Lorem assdaf fdfadfad 8th4h f3f9f2f r2fj293f fd32jhf9293fhnwf d2fn29d af f2f df23rfa 3rfwfcwfscscsc"
+      />
     </View>
   );
 };

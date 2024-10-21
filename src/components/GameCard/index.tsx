@@ -4,9 +4,13 @@ import {Image, Text, TouchableOpacity, View} from 'react-native';
 import {styles} from './styles';
 import Title from '../Title';
 import Subtitle from '../Subtitle';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../navigation/RootStackNavigator';
 
 const GameCard = () => {
   const {t} = useTranslation();
+  const navigation = useNavigation();
   return (
     <TouchableOpacity style={styles.container} activeOpacity={0.7}>
       <View style={styles.preview}>

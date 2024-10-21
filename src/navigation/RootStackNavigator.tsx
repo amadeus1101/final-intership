@@ -1,13 +1,9 @@
-import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
-import HomeTabNavigator from './HomeTabNavigator';
-import Profile from '../screens/Profile';
-import {Colors} from '../constants/Colors';
+import HomeTabNavigator from './RootTabNavigator';
 
 type RootStackParamList = {
-  HomeTab: undefined;
-  Profile: undefined;
+  RootTab: undefined;
 };
 
 const RootStack = createStackNavigator<RootStackParamList>();
@@ -16,13 +12,12 @@ const RootStackNavigator = () => {
   return (
     <RootStack.Navigator>
       <RootStack.Screen
-        name="HomeTab"
+        name="RootTab"
         component={HomeTabNavigator}
         options={{
           headerShown: false,
         }}
       />
-      <RootStack.Screen name="Profile" component={Profile} />
     </RootStack.Navigator>
   );
 };
