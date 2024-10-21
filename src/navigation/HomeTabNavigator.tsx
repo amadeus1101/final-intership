@@ -5,12 +5,19 @@ import Game from '../screens/Game';
 import Profile from '../screens/Profile';
 import GameMode from '../screens/GameMode';
 import {Colors} from '../constants/Colors';
-import {background_dark, background_light, home_icon} from '../assets/img';
-import {Button, Image, Text, View} from 'react-native';
-import StackHeader from './components/StackHeader';
 import TabText from './components/TabText';
 import TabIcon from './components/TabIcon';
 import {useTranslation} from 'react-i18next';
+import {
+  focused_home_icon,
+  focused_menu_icon,
+  focused_puzzle_icon,
+  focused_study_icon,
+  home_icon,
+  menu_icon,
+  puzzle_icon,
+  study_icon,
+} from '../assets/img';
 
 type HomeTabParamList = {
   Home: undefined;
@@ -50,7 +57,11 @@ const HomeTabNavigator = () => {
             <TabText content={t('bottombarHome')} focused={focused} />
           ),
           tabBarIcon: ({focused}) => (
-            <TabIcon src={undefined} src_active={undefined} focused={focused} />
+            <TabIcon
+              src={home_icon}
+              src_active={focused_home_icon}
+              focused={focused}
+            />
           ),
         }}
       />
@@ -62,7 +73,11 @@ const HomeTabNavigator = () => {
             <TabText content={t('bottombarPuzzle')} focused={focused} />
           ),
           tabBarIcon: ({focused}) => (
-            <TabIcon src={undefined} src_active={undefined} focused={focused} />
+            <TabIcon
+              src={puzzle_icon}
+              src_active={focused_puzzle_icon}
+              focused={focused}
+            />
           ),
         }}
       />
@@ -74,7 +89,11 @@ const HomeTabNavigator = () => {
             <TabText content={t('bottombarStudy')} focused={focused} />
           ),
           tabBarIcon: ({focused}) => (
-            <TabIcon src={undefined} src_active={undefined} focused={focused} />
+            <TabIcon
+              src={study_icon}
+              src_active={focused_study_icon}
+              focused={focused}
+            />
           ),
         }}
       />
@@ -86,7 +105,11 @@ const HomeTabNavigator = () => {
             <TabText content={t('bottomBarSettings')} focused={focused} />
           ),
           tabBarIcon: ({focused}) => (
-            <TabIcon src={undefined} src_active={undefined} focused={focused} />
+            <TabIcon
+              src={menu_icon}
+              src_active={focused_menu_icon}
+              focused={focused}
+            />
           ),
         }}
       />
