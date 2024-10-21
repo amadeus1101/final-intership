@@ -2,15 +2,7 @@ import {BottomTabNavigationOptions} from '@react-navigation/bottom-tabs';
 import {Colors} from '../constants/Colors';
 
 export const tabOptions: BottomTabNavigationOptions = {
-  headerStyle: {
-    backgroundColor: Colors.black_black,
-  },
-  headerTitleStyle: {
-    color: Colors.white,
-    fontFamily: 'Ubuntu-Bold',
-    fontSize: 22,
-  },
-  headerTitleAlign: 'center',
+  headerShown: false,
   tabBarStyle: {
     backgroundColor: Colors.black_black,
   },

@@ -18,12 +18,13 @@ import Settings from '../screens/Settings';
 import Rating from '../screens/Rating';
 import {tabOptions} from './tabOptions';
 import HomeStackNavigator from './HomeStackNavigator';
+import MoreOptions from '../screens/MoreOptions';
 
 export type AppTabParamList = {
   Home: undefined;
   Puzzle: undefined;
   Rating: undefined;
-  Settings: undefined;
+  MoreOptions: undefined;
 };
 
 const AppTab = createBottomTabNavigator<AppTabParamList>();
@@ -81,8 +82,8 @@ const AppTabNavigator = () => {
         }}
       />
       <AppTab.Screen
-        name="Settings"
-        component={Settings}
+        name="MoreOptions"
+        component={MoreOptions}
         options={{
           tabBarLabel: ({focused}) => (
             <TabText content={t('bottomBarSettings')} focused={focused} />

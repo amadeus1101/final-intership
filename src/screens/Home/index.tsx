@@ -1,23 +1,14 @@
 import React from 'react';
 import MainButton from '../../components/MainButton';
-import {background_dark, background_light} from '../../assets/img';
-import GameCardList from '../../widgets/GameCardList';
 import {useTranslation} from 'react-i18next';
 import Wrapper from '../../components/Wrapper';
-import {
-  Alert,
-  FlatList,
-  ImageBackground,
-  SafeAreaView,
-  View,
-} from 'react-native';
+import {FlatList} from 'react-native';
 import {styles} from './styles';
 import GameCard from '../../components/GameCard';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {AppStackParamList} from '../../navigation/AppStackNavigator';
-import {useNavigation, useRoute} from '@react-navigation/native';
+import {HomeStackParamList} from '../../navigation/HomeStackNavigator';
 
-type Props = NativeStackScreenProps<AppStackParamList, 'AppTab'>;
+type Props = NativeStackScreenProps<HomeStackParamList, 'Home'>;
 
 const Home = ({navigation, route}: Props) => {
   const {t} = useTranslation();
