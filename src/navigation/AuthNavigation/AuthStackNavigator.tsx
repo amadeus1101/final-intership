@@ -3,7 +3,7 @@ import React from 'react';
 import SignIn from '../../screens/SignIn';
 import SignUp from '../../screens/SignUp';
 
-type AuthStackParamList = {
+export type AuthStackParamList = {
   SignIn: undefined;
   SignUp: undefined;
 };

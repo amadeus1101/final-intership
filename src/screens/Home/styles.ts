@@ -9,4 +9,8 @@ export const styles = StyleSheet.create({
   background: {
     padding: '3%',
   },
+  list: {
+    alignItems: 'center',
+    flexGrow: 0,
+  },
 });

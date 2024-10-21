@@ -7,8 +7,12 @@ import {useTranslation} from 'react-i18next';
 import Header from '../../components/Header';
 import AuthLink from '../../components/Alert';
 import Wrapper from '../../components/Wrapper';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {AuthStackParamList} from '../../navigation/AuthNavigation/AuthStackNavigator';
 
-const SignUp = () => {
+type Props = NativeStackScreenProps<AuthStackParamList, 'SignUp'>;
+
+const SignUp = ({navigation}: Props) => {
   const {t} = useTranslation();
 
   const onClickCreate = () => {
@@ -31,7 +35,7 @@ const SignUp = () => {
           <AuthLink
             content={t('returnSignIn')}
             link={t('signIn')}
-            callback={() => {}}
+            callback={() => navigation.navigate('SignIn')}
           />
         </KeyboardAvoidingView>
       </View>

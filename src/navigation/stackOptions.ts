@@ -1,6 +1,7 @@
-import {Colors} from '../../constants/Colors';
+import {StackNavigationOptions} from '@react-navigation/stack';
+import {Colors} from '../constants/Colors';
 
-export const AppStackOptions = {
+export const stackOptions: StackNavigationOptions = {
   headerStyle: {
     backgroundColor: Colors.black_black,
   },

@@ -23,12 +23,8 @@ export const styles = StyleSheet.create({
     backgroundColor: Colors.grey_light,
   },
   content: {
+    marginLeft: 10,
     justifyContent: 'space-evenly',
-  },
-  subtitle: {
-    color: Colors.grey_light,
-    fontFamily: 'Ubuntu-Regular',
-    fontSize: TextSize.mini,
   },
   rating: {
     flexDirection: 'row',

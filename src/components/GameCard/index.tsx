@@ -1,27 +1,50 @@
 import React from 'react';
 import {useTranslation} from 'react-i18next';
-import {Image, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Image,
+  ImageSourcePropType,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import {styles} from './styles';
 import Title from '../Title';
 import Subtitle from '../Subtitle';
-import {useNavigation} from '@react-navigation/native';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {RootStackParamList} from '../../navigation/RootStackNavigator';
 
-const GameCard = () => {
+type GameCardProps = {
+  title: string;
+  subtitle: string;
+  league: string;
+  image: ImageSourcePropType | undefined;
+  league_icon: ImageSourcePropType | undefined;
+  onClick: () => void;
+};
+
+const GameCard: React.FC<GameCardProps> = ({
+  title,
+  subtitle,
+  league,
+  image = undefined,
+  league_icon = undefined,
+  onClick,
+}) => {
   const {t} = useTranslation();
-  const navigation = useNavigation();
   return (
-    <TouchableOpacity style={styles.container} activeOpacity={0.7}>
+    <TouchableOpacity
+      style={styles.container}
+      activeOpacity={0.7}
+      onPress={onClick}>
       <View style={styles.preview}>
-        <Image />
+        <Image source={image} />
       </View>
       <View style={styles.content}>
-        <Title>{t('gameTitle') + ' #1'}</Title>
-        <Subtitle>{t('gameSubtitle')}</Subtitle>
+        <Title>{title}</Title>
+        <Subtitle>{subtitle}</Subtitle>
         <View style={styles.rating}>
-          <View style={styles.rating_icon}></View>
-          <Text style={styles.rating_content}>{t('leagueSilver')}</Text>
+          <View style={styles.rating_icon}>
+            <Image source={league_icon} />
+          </View>
+          <Text style={styles.rating_content}>{league}</Text>
         </View>
       </View>
     </TouchableOpacity>

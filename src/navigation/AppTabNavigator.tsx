@@ -1,6 +1,5 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
-import {Colors} from '../constants/Colors';
 import TabText from './components/TabText';
 import TabIcon from './components/TabIcon';
 import {useTranslation} from 'react-i18next';
@@ -14,37 +13,27 @@ import {
   puzzle_icon,
   study_icon,
 } from '../assets/img';
-import {View} from 'react-native';
-import HomeStackNavigator from './HomeNavigation/HomeStackNavigator';
-import PuzzleStackNavigator from './HomeNavigation/PuzzleStackNavigator';
-import RatingStackNavigator from './HomeNavigation/RatingStackNavigator';
-import SettingsStackNavigator from './HomeNavigation/SettingsStackNavigator';
+import Puzzles from '../screens/Puzzles';
+import Settings from '../screens/Settings';
+import Rating from '../screens/Rating';
+import {tabOptions} from './tabOptions';
+import HomeStackNavigator from './HomeStackNavigator';
 
-type RootTabParamList = {
-  HomeStack: undefined;
-  PuzzleStack: undefined;
-  RatingStack: undefined;
-  SettingsStack: undefined;
+export type AppTabParamList = {
+  Home: undefined;
+  Puzzle: undefined;
+  Rating: undefined;
+  Settings: undefined;
 };
 
-const RootTab = createBottomTabNavigator<RootTabParamList>();
+const AppTab = createBottomTabNavigator<AppTabParamList>();
 
-const RootTabNavigator = () => {
+const AppTabNavigator = () => {
   const {t} = useTranslation();
   return (
-    <RootTab.Navigator
-      screenOptions={{
-        headerShown: false,
-        tabBarStyle: {
-          backgroundColor: Colors.black_black,
-        },
-        tabBarLabelStyle: {
-          color: Colors.grey_light,
-        },
-      }}
-      initialRouteName="HomeStack">
-      <RootTab.Screen
-        name="HomeStack"
+    <AppTab.Navigator screenOptions={tabOptions} initialRouteName="Home">
+      <AppTab.Screen
+        name="Home"
         component={HomeStackNavigator}
         options={{
           tabBarLabel: ({focused}) => (
@@ -59,9 +48,9 @@ const RootTabNavigator = () => {
           ),
         }}
       />
-      <RootTab.Screen
-        name="PuzzleStack"
-        component={PuzzleStackNavigator}
+      <AppTab.Screen
+        name="Puzzle"
+        component={Puzzles}
         options={{
           tabBarLabel: ({focused}) => (
             <TabText content={t('bottombarPuzzle')} focused={focused} />
@@ -75,9 +64,9 @@ const RootTabNavigator = () => {
           ),
         }}
       />
-      <RootTab.Screen
-        name="RatingStack"
-        component={RatingStackNavigator}
+      <AppTab.Screen
+        name="Rating"
+        component={Rating}
         options={{
           tabBarLabel: ({focused}) => (
             <TabText content={t('bottombarStudy')} focused={focused} />
@@ -91,9 +80,9 @@ const RootTabNavigator = () => {
           ),
         }}
       />
-      <RootTab.Screen
-        name="SettingsStack"
-        component={SettingsStackNavigator}
+      <AppTab.Screen
+        name="Settings"
+        component={Settings}
         options={{
           tabBarLabel: ({focused}) => (
             <TabText content={t('bottomBarSettings')} focused={focused} />
@@ -107,8 +96,8 @@ const RootTabNavigator = () => {
           ),
         }}
       />
-    </RootTab.Navigator>
+    </AppTab.Navigator>
   );
 };
 
-export default RootTabNavigator;
+export default AppTabNavigator;

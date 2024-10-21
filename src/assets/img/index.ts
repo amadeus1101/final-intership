@@ -3,6 +3,8 @@ const background_light = require('./wallpaper_light.png');
 const indev_dark = require('./indev.png');
 
 const splash_icon = require('./splash_dark.png');
+const user_icon = require('./user_light.png');
+const arrow_icon = require('./arrow_light.png');
 
 const home_icon = require('./home.png');
 const puzzle_icon = require('./puzzle.png');
@@ -38,4 +40,6 @@ export {
   focused_puzzle_icon,
   focused_study_icon,
   splash_icon,
+  arrow_icon,
+  user_icon,
 };
