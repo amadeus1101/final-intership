@@ -15,16 +15,18 @@ import {
 } from '../assets/img';
 import Puzzles from '../screens/Puzzles';
 import Settings from '../screens/Settings';
-import Rating from '../screens/Rating';
 import {tabOptions} from './tabOptions';
 import HomeStackNavigator from './HomeStackNavigator';
-import MoreOptions from '../screens/MoreOptions';
+import MoreOptions from '../screens/Options';
+import PuzzleStackNavigator from './PuzzleStackNavigator';
+import LessonStackNavigator from './LessonStackNavigator';
+import OptionsStackNavigator from './OptionsStackNavigator';
 
 export type AppTabParamList = {
   Home: undefined;
-  Puzzle: undefined;
-  Rating: undefined;
-  MoreOptions: undefined;
+  Puzzles: undefined;
+  Lessons: undefined;
+  Options: undefined;
 };
 
 const AppTab = createBottomTabNavigator<AppTabParamList>();
@@ -50,8 +52,8 @@ const AppTabNavigator = () => {
         }}
       />
       <AppTab.Screen
-        name="Puzzle"
-        component={Puzzles}
+        name="Puzzles"
+        component={PuzzleStackNavigator}
         options={{
           tabBarLabel: ({focused}) => (
             <TabText content={t('bottombarPuzzle')} focused={focused} />
@@ -66,8 +68,8 @@ const AppTabNavigator = () => {
         }}
       />
       <AppTab.Screen
-        name="Rating"
-        component={Rating}
+        name="Lessons"
+        component={LessonStackNavigator}
         options={{
           tabBarLabel: ({focused}) => (
             <TabText content={t('bottombarStudy')} focused={focused} />
@@ -82,8 +84,8 @@ const AppTabNavigator = () => {
         }}
       />
       <AppTab.Screen
-        name="MoreOptions"
-        component={MoreOptions}
+        name="Options"
+        component={OptionsStackNavigator}
         options={{
           tabBarLabel: ({focused}) => (
             <TabText content={t('bottomBarSettings')} focused={focused} />

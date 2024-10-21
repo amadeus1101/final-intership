@@ -1,8 +1,8 @@
 import React from 'react';
 import InDev from '../InDev';
 
-const MoreOptions = () => {
+const Lessons = () => {
   return <InDev />;
 };
 
-export default MoreOptions;
+export default Lessons;
