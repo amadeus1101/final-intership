@@ -1,7 +1,7 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
-import SignIn from '../../screens/SignIn';
-import SignUp from '../../screens/SignUp';
+import SignIn from '../screens/SignIn';
+import SignUp from '../screens/SignUp';
 
 export type AuthStackParamList = {
   SignIn: undefined;

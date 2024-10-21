@@ -6,7 +6,7 @@ import {FlatList} from 'react-native';
 import {styles} from './styles';
 import GameCard from '../../components/GameCard';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {HomeStackParamList} from '../../navigation/HomeStackNavigator';
+import {HomeStackParamList} from '../../navigation/AppTabRoutes/HomeStackNavigator';
 
 type Props = NativeStackScreenProps<HomeStackParamList, 'Home'>;
 

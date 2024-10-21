@@ -2,7 +2,7 @@ import React from 'react';
 import Wrapper from '../../components/Wrapper';
 import {Text, TouchableOpacity} from 'react-native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {OptionsStackParamList} from '../../navigation/OptionsStackNavigator';
+import {OptionsStackParamList} from '../../navigation/AppTabRoutes/OptionsStackNavigator';
 
 type Props = NativeStackScreenProps<OptionsStackParamList, 'Options'>;
 

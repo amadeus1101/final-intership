@@ -1,13 +1,13 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
-import Options from '../screens/Options';
-import {stackOptions} from './stackOptions';
-import Profile from '../screens/Profile';
-import Rating from '../screens/Rating';
-import Settings from '../screens/Settings';
-import HeaderButton from './components/HeaderButton';
-import {arrow_icon} from '../assets/img';
+import Options from '../../screens/Options';
+import {stackOptions} from '../stackOptions';
+import Profile from '../../screens/Profile';
+import Rating from '../../screens/Rating';
+import Settings from '../../screens/Settings';
+import HeaderButton from '../components/HeaderButton';
+import {arrow_icon} from '../../assets/img';
 
 export type OptionsStackParamList = {
   Options: undefined;

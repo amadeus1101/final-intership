@@ -1,13 +1,13 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
-import Game from '../screens/Game';
-import Home from '../screens/Home';
-import GameMode from '../screens/GameMode';
+import Game from '../../screens/Game';
+import Home from '../../screens/Home';
+import GameMode from '../../screens/GameMode';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {stackOptions} from './stackOptions';
-import HeaderButton from './components/HeaderButton';
-import {arrow_icon, user_icon} from '../assets/img';
-import Profile from '../screens/Profile';
+import {stackOptions} from '../stackOptions';
+import HeaderButton from '../components/HeaderButton';
+import {arrow_icon, user_icon} from '../../assets/img';
+import Profile from '../../screens/Profile';
 
 export type HomeStackParamList = {
   Home: undefined;

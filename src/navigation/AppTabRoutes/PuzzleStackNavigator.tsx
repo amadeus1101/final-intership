@@ -1,10 +1,10 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
-import Puzzles from '../screens/Puzzles';
-import HeaderButton from './components/HeaderButton';
-import {arrow_icon} from '../assets/img';
-import {stackOptions} from './stackOptions';
+import Puzzles from '../../screens/Puzzles';
+import HeaderButton from '../components/HeaderButton';
+import {arrow_icon} from '../../assets/img';
+import {stackOptions} from '../stackOptions';
 
 export type PuzzlesStackParamList = {
   Puzzles: undefined;

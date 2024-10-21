@@ -13,14 +13,11 @@ import {
   puzzle_icon,
   study_icon,
 } from '../assets/img';
-import Puzzles from '../screens/Puzzles';
-import Settings from '../screens/Settings';
 import {tabOptions} from './tabOptions';
-import HomeStackNavigator from './HomeStackNavigator';
-import MoreOptions from '../screens/Options';
-import PuzzleStackNavigator from './PuzzleStackNavigator';
-import LessonStackNavigator from './LessonStackNavigator';
-import OptionsStackNavigator from './OptionsStackNavigator';
+import HomeStackNavigator from './AppTabRoutes/HomeStackNavigator';
+import PuzzleStackNavigator from './AppTabRoutes/PuzzleStackNavigator';
+import LessonStackNavigator from './AppTabRoutes/LessonStackNavigator';
+import OptionsStackNavigator from './AppTabRoutes/OptionsStackNavigator';
 
 export type AppTabParamList = {
   Home: undefined;

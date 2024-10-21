@@ -1,7 +1,7 @@
 import {NavigationContainer} from '@react-navigation/native';
 import React, {useState} from 'react';
 import Splash from '../screens/Splash';
-import AuthStackNavigator from './AuthNavigation/AuthStackNavigator';
+import AuthStackNavigator from './AuthStackNavigator';
 import AppTabNavigator from './AppTabNavigator';
 
 const RootNavigator = () => {

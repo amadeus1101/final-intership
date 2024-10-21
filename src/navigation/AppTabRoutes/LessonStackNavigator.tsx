@@ -1,11 +1,10 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
-import HeaderButton from './components/HeaderButton';
-import {arrow_icon} from '../assets/img';
-import {stackOptions} from './stackOptions';
-import InDev from '../screens/InDev';
-import Lessons from '../screens/Lessons';
+import HeaderButton from '../components/HeaderButton';
+import {arrow_icon} from '../../assets/img';
+import {stackOptions} from '../stackOptions';
+import Lessons from '../../screens/Lessons';
 
 export type LessonsStackParamList = {
   Lessons: undefined;
