@@ -1,29 +1,38 @@
-import auth from '@react-native-firebase/auth';
+import {ReactNativeFirebase} from '@react-native-firebase/app';
+import auth, {FirebaseAuthTypes} from '@react-native-firebase/auth';
 
-//reg
-export const signUp = async (email: string, password: string) => {
-  try {
-    const userCredential = await auth().createUserWithEmailAndPassword(
-      email,
-      password,
-    );
-    return userCredential.user;
-  } catch (error) {
-    return false;
-  }
-};
+class Auth {
+  signUp = async (email: string, password: string) => {
+    try {
+      auth().createUserWithEmailAndPassword(email, password);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-//login
-export const signIn = async (email: string, password: string) => {
-  try {
-    const userCredential = await auth().signInWithEmailAndPassword(
-      email,
-      password,
-    );
-    console.log(userCredential.user.uid);
-    return userCredential.user.uid;
-  } catch (error) {
-    console.error('Error during sign in:', error);
-    return false;
-  }
-};
+  signIn = async (email: string, password: string) => {
+    try {
+      auth().signInWithEmailAndPassword(email, password);
+    } catch (error) {
+      console.error('Error during sign in:', error);
+    }
+  };
+
+  signOut = async () => {
+    try {
+      auth().signOut();
+    } catch (error) {
+      console.error('Error during sign out:', error);
+    }
+  };
+
+  getUser = () => {
+    return auth().currentUser;
+  };
+
+  subscribe = (stateChanger: (user: FirebaseAuthTypes.User | null) => void) => {
+    return auth().onAuthStateChanged(stateChanger);
+  };
+}
+
+export default new Auth();

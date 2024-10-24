@@ -1,6 +1,5 @@
 import React from 'react';
-import Wrapper from '../../components/Wrapper';
-import {ScrollView, Text, TouchableOpacity} from 'react-native';
+import {ScrollView} from 'react-native';
 import MenuItem from '../../components/MenuItem';
 import {
   amethist_league_icon,
@@ -16,6 +15,7 @@ import {
 } from '../../assets/img';
 import {styles} from './styles';
 import {navigate} from '../../services/navigator/Navigator';
+import Auth from '../../services/firebase/Auth';
 
 const Options = () => {
   return (
@@ -50,8 +50,8 @@ const Options = () => {
       <MenuItem image={amethist_league_icon} onPress={() => {}}>
         Menu #6
       </MenuItem>
-      <MenuItem image={emerald_league_icon} onPress={() => {}}>
-        Menu #7
+      <MenuItem image={emerald_league_icon} onPress={() => Auth.signOut()}>
+        Logout
       </MenuItem>
     </ScrollView>
   );

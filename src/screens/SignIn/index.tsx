@@ -11,7 +11,7 @@ import {styles} from './styles';
 import {useTranslation} from 'react-i18next';
 import Header from '../../components/Header';
 import Wrapper from '../../components/Wrapper';
-import {signIn} from '../../services/firebase/Auth';
+import Auth from '../../services/firebase/Auth';
 import {navigate} from '../../services/navigator/Navigator';
 
 const SignIn = () => {
@@ -26,9 +26,7 @@ const SignIn = () => {
           <MainButton
             content={t('buttonSignIn')}
             active={true}
-            onClick={() =>
-              console.log(signIn('testuser@example.com', 'qwerty12345'))
-            }
+            onClick={() => Auth.signIn('testuser@example.com', 'qwerty12345')}
           />
           <View style={styles.link_container}>
             <Text style={styles.text}>New to native chess? Click to </Text>

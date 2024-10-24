@@ -4,28 +4,27 @@ import {NavigationContainer} from '@react-navigation/native';
 import AuthStackNavigator from './src/navigation/AuthStackNavigator';
 import AppStackNavigator from './src/navigation/AppStackNavigator';
 import {navigationRef} from './src/services/navigator/Navigator';
+import {FirebaseAuthTypes} from '@react-native-firebase/auth';
+import Auth from './src/services/firebase/Auth';
 
 const App = () => {
-  const [isLoading, setLoading] = useState(false);
-  const [userToken, setUserToken] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [user, setUser] = useState<FirebaseAuthTypes.User | null>(null);
 
-  if (isLoading) return <Splash />;
+  function onAuthStateChanged(user: FirebaseAuthTypes.User | null) {
+    setUser(user);
+    if (loading) setLoading(false);
+  }
 
   useEffect(() => {
-    const initializeFirebase = async () => {
-      console.log('firebase initialized');
-
-      // await auth().createUserWithEmailAndPassword(
-      //   'testuser@example.com',
-      //   'qwerty12345',
-      // );
-    };
-    initializeFirebase();
+    const subscriber = Auth.subscribe(onAuthStateChanged);
+    return subscriber; // unsubscribe on unmount
   }, []);
 
+  if (loading) return <Splash />;
   return (
     <NavigationContainer ref={navigationRef}>
-      {userToken === null ? <AuthStackNavigator /> : <AppStackNavigator />}
+      {user === null ? <AuthStackNavigator /> : <AppStackNavigator />}
     </NavigationContainer>
   );
 };
