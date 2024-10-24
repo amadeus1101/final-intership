@@ -21,6 +21,12 @@ const focused_menu_icon = require('./menu_focused.png');
 const focused_eye_icon = require('./eye_focused.png');
 
 const gold_league_icon = require('./gold.png');
+const silver_league_icon = require('./silver.png');
+const bronze_league_icon = require('./bronze.png');
+const emerald_league_icon = require('./emerald.png');
+const saphire_league_icon = require('./saphire.png');
+const ruby_league_icon = require('./ruby.png');
+const amethist_league_icon = require('./amethist.png');
 
 export {
   background_dark,
@@ -33,7 +39,6 @@ export {
   menu_icon,
   eye_icon,
   trophy_icon,
-  gold_league_icon,
   focused_eye_icon,
   focused_home_icon,
   focused_menu_icon,
@@ -42,4 +47,11 @@ export {
   splash_icon,
   arrow_icon,
   user_icon,
+  emerald_league_icon,
+  amethist_league_icon,
+  ruby_league_icon,
+  saphire_league_icon,
+  gold_league_icon,
+  silver_league_icon,
+  bronze_league_icon,
 };

@@ -3,10 +3,9 @@ import React from 'react';
 import Game from '../../screens/Game';
 import Home from '../../screens/Home';
 import GameMode from '../../screens/GameMode';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {stackOptions} from '../stackOptions';
 import HeaderButton from '../components/HeaderButton';
-import {arrow_icon, user_icon} from '../../assets/img';
+import {arrow_icon} from '../../assets/img';
 import Profile from '../../screens/Profile';
 import {goBack, navigate} from '../RootNavigator';
 import TimeMode from '../../screens/TimeMode';
@@ -35,12 +34,6 @@ const HomeStackNavigator = () => {
         name="Home"
         component={Home}
         options={{
-          headerRight: () => (
-            <HeaderButton
-              source={user_icon}
-              onClick={() => navigate('Profile')}
-            />
-          ),
           headerLeft: undefined,
         }}
       />
