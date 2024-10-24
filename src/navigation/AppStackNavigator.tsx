@@ -9,7 +9,7 @@ import Rating from '../screens/Rating';
 import Settings from '../screens/Settings';
 import {stackStyles} from './stackStyles';
 import StepBack from './components/StepBack';
-import {goBack} from './RootNavigator';
+import {goBack} from '../services/navigator/Navigator';
 
 export type AppStackParamList = {
   HomeTab: undefined;

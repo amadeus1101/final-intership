@@ -6,7 +6,7 @@ import {useTranslation} from 'react-i18next';
 import Title from '../../components/Title';
 import Switcher from '../../components/Switcher';
 import {styles} from './styles';
-import {goBack} from '../../navigation/RootNavigator';
+import {goBack} from '../../services/navigator/Navigator';
 
 const TimeMode = () => {
   const {t} = useTranslation();

@@ -13,4 +13,16 @@ export const styles = StyleSheet.create({
   form: {
     alignItems: 'center',
   },
+  link_container: {
+    marginTop: 10,
+    flexDirection: 'row',
+  },
+  text: {
+    textAlign: 'center',
+    fontSize: TextSize.mini,
+    color: Colors.grey_light,
+  },
+  link: {
+    textDecorationLine: 'underline',
+  },
 });

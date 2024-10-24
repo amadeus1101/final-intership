@@ -1,7 +1,6 @@
 import React from 'react';
 import Wrapper from '../../components/Wrapper';
 import {ScrollView, Text, TouchableOpacity} from 'react-native';
-import {navigate} from '../../navigation/RootNavigator';
 import MenuItem from '../../components/MenuItem';
 import {
   amethist_league_icon,
@@ -16,6 +15,7 @@ import {
   user_icon,
 } from '../../assets/img';
 import {styles} from './styles';
+import {navigate} from '../../services/navigator/Navigator';
 
 const Options = () => {
   return (

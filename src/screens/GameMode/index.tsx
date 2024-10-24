@@ -9,8 +9,8 @@ import Title from '../../components/Title';
 import Switcher from '../../components/Switcher';
 import Wrapper from '../../components/Wrapper';
 import {ScrollView} from 'react-native-gesture-handler';
-import {navigate} from '../../navigation/RootNavigator';
 import {board_icon} from '../../assets/img';
+import {navigate} from '../../services/navigator/Navigator';
 
 const GameMode = () => {
   const {t} = useTranslation();

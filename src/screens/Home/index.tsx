@@ -5,7 +5,7 @@ import Wrapper from '../../components/Wrapper';
 import {FlatList} from 'react-native';
 import {styles} from './styles';
 import GameCard from '../../components/GameCard';
-import {navigate} from '../../navigation/RootNavigator';
+import {navigate} from '../../services/navigator/Navigator';
 
 const Home = () => {
   const {t} = useTranslation();
@@ -32,17 +32,6 @@ const Home = () => {
         onClick={() => navigate('GameMode')}
       />
     </Wrapper>
-
-    // <SafeAreaView style={styles.container}>
-    //   <ImageBackground source={background_dark} style={styles.background}>
-    //     <GameCardList />
-    //     <MainButton
-    //       content={t('buttonPlay')}
-    //       active={true}
-    //       onClick={() => {}}
-    //     />
-    //   </ImageBackground>
-    // </SafeAreaView>
   );
 };
 

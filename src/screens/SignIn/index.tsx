@@ -1,5 +1,11 @@
 import React from 'react';
-import {KeyboardAvoidingView, SafeAreaView, Text, View} from 'react-native';
+import {
+  KeyboardAvoidingView,
+  SafeAreaView,
+  Text,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import Input from '../../components/Input';
 import MainButton from '../../components/MainButton';
 import {styles} from './styles';
@@ -7,8 +13,8 @@ import {useTranslation} from 'react-i18next';
 import Header from '../../components/Header';
 import Alert from '../../components/Alert';
 import Wrapper from '../../components/Wrapper';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {navigate} from '../../navigation/RootNavigator';
+import {signIn} from '../../services/firebase/Auth';
+import {navigate} from '../../services/navigator/Navigator';
 
 const SignIn = () => {
   const {t} = useTranslation();
@@ -22,13 +28,16 @@ const SignIn = () => {
           <MainButton
             content={t('buttonSignIn')}
             active={true}
-            onClick={() => {}}
+            onClick={() =>
+              console.log(signIn('testuser@example.com', 'qwerty12345'))
+            }
           />
-          <Alert
-            content={t('returnSignUp')}
-            link={t('signUp')}
-            callback={() => navigate('SignUp')}
-          />
+          <View style={styles.link_container}>
+            <Text style={styles.text}>New to native chess? Click to </Text>
+            <TouchableHighlight onPress={() => navigate('SignUp')}>
+              <Text style={[styles.text, styles.link]}>Sign Up</Text>
+            </TouchableHighlight>
+          </View>
         </KeyboardAvoidingView>
       </View>
     </Wrapper>

@@ -1,5 +1,12 @@
 import React, {useState} from 'react';
-import {Alert, KeyboardAvoidingView, SafeAreaView, View} from 'react-native';
+import {
+  Alert,
+  KeyboardAvoidingView,
+  SafeAreaView,
+  Text,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import Input from '../../components/Input';
 import MainButton from '../../components/MainButton';
 import {styles} from './styles';
@@ -7,8 +14,7 @@ import {useTranslation} from 'react-i18next';
 import Header from '../../components/Header';
 import AuthLink from '../../components/Alert';
 import Wrapper from '../../components/Wrapper';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {navigate} from '../../navigation/RootNavigator';
+import {navigate} from '../../services/navigator/Navigator';
 
 const SignUp = () => {
   const {t} = useTranslation();
@@ -30,11 +36,12 @@ const SignUp = () => {
             active={true}
             onClick={onClickCreate}
           />
-          <AuthLink
-            content={t('returnSignIn')}
-            link={t('signIn')}
-            callback={() => navigate('SignIn')}
-          />
+          <View style={styles.link_container}>
+            <Text style={styles.text}>Or back to </Text>
+            <TouchableHighlight onPress={() => navigate('SignIn')}>
+              <Text style={[styles.text, styles.link]}>Sign In</Text>
+            </TouchableHighlight>
+          </View>
         </KeyboardAvoidingView>
       </View>
     </Wrapper>
