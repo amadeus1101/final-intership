@@ -8,20 +8,29 @@ import {stackOptions} from '../stackOptions';
 import HeaderButton from '../components/HeaderButton';
 import {arrow_icon, user_icon} from '../../assets/img';
 import Profile from '../../screens/Profile';
+import {goBack, navigate} from '../RootNavigator';
+import TimeMode from '../../screens/TimeMode';
 
 export type HomeStackParamList = {
   Home: undefined;
   Profile: undefined;
   Game: undefined;
   GameMode: undefined;
+  TimeMode: undefined;
 };
-type HomeStackProps = NativeStackScreenProps<HomeStackParamList, 'Home'>;
 
 const HomeStack = createStackNavigator<HomeStackParamList>();
 
-const HomeStackNavigator = ({navigation, route}: HomeStackProps) => {
+const HomeStackNavigator = () => {
   return (
-    <HomeStack.Navigator initialRouteName="Home" screenOptions={stackOptions}>
+    <HomeStack.Navigator
+      initialRouteName="Home"
+      screenOptions={{
+        ...stackOptions,
+        headerLeft: () => (
+          <HeaderButton source={arrow_icon} onClick={() => goBack()} />
+        ),
+      }}>
       <HomeStack.Screen
         name="Home"
         component={Home}
@@ -29,47 +38,16 @@ const HomeStackNavigator = ({navigation, route}: HomeStackProps) => {
           headerRight: () => (
             <HeaderButton
               source={user_icon}
-              onClick={() => navigation.navigate('Profile')}
+              onClick={() => navigate('Profile')}
             />
           ),
+          headerLeft: undefined,
         }}
       />
-      <HomeStack.Screen
-        name="Game"
-        component={Game}
-        options={{
-          headerLeft: () => (
-            <HeaderButton
-              source={arrow_icon}
-              onClick={() => navigation.goBack()}
-            />
-          ),
-        }}
-      />
-      <HomeStack.Screen
-        name="GameMode"
-        component={GameMode}
-        options={{
-          headerLeft: () => (
-            <HeaderButton
-              source={arrow_icon}
-              onClick={() => navigation.goBack()}
-            />
-          ),
-        }}
-      />
-      <HomeStack.Screen
-        name="Profile"
-        component={Profile}
-        options={{
-          headerLeft: () => (
-            <HeaderButton
-              source={arrow_icon}
-              onClick={() => navigation.goBack()}
-            />
-          ),
-        }}
-      />
+      <HomeStack.Screen name="Game" component={Game} />
+      <HomeStack.Screen name="GameMode" component={GameMode} />
+      <HomeStack.Screen name="TimeMode" component={TimeMode} />
+      <HomeStack.Screen name="Profile" component={Profile} />
     </HomeStack.Navigator>
   );
 };

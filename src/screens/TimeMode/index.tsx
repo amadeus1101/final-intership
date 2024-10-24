@@ -6,7 +6,7 @@ import {useTranslation} from 'react-i18next';
 import Title from '../../components/Title';
 import Switcher from '../../widgets/Switcher';
 import {styles} from './styles';
-import Header from '../../components/Header';
+import {goBack} from '../../navigation/RootNavigator';
 
 const TimeMode = () => {
   const {t} = useTranslation();
@@ -46,7 +46,7 @@ const TimeMode = () => {
           />
         </View>
       </ScrollView>
-      <MainButton content={t('buttonNext')} active onClick={() => {}} />
+      <MainButton content={t('buttonNext')} active onClick={() => goBack()} />
     </Wrapper>
   );
 };

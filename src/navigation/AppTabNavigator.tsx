@@ -20,10 +20,10 @@ import LessonStackNavigator from './AppTabRoutes/LessonStackNavigator';
 import OptionsStackNavigator from './AppTabRoutes/OptionsStackNavigator';
 
 export type AppTabParamList = {
-  Home: undefined;
-  Puzzles: undefined;
-  Lessons: undefined;
-  Options: undefined;
+  HomeStack: undefined;
+  PuzzlesStack: undefined;
+  LessonsStack: undefined;
+  OptionsStack: undefined;
 };
 
 const AppTab = createBottomTabNavigator<AppTabParamList>();
@@ -31,9 +31,9 @@ const AppTab = createBottomTabNavigator<AppTabParamList>();
 const AppTabNavigator = () => {
   const {t} = useTranslation();
   return (
-    <AppTab.Navigator screenOptions={tabOptions} initialRouteName="Home">
+    <AppTab.Navigator screenOptions={tabOptions} initialRouteName="HomeStack">
       <AppTab.Screen
-        name="Home"
+        name="HomeStack"
         component={HomeStackNavigator}
         options={{
           tabBarLabel: ({focused}) => (
@@ -49,7 +49,7 @@ const AppTabNavigator = () => {
         }}
       />
       <AppTab.Screen
-        name="Puzzles"
+        name="PuzzlesStack"
         component={PuzzleStackNavigator}
         options={{
           tabBarLabel: ({focused}) => (
@@ -65,7 +65,7 @@ const AppTabNavigator = () => {
         }}
       />
       <AppTab.Screen
-        name="Lessons"
+        name="LessonsStack"
         component={LessonStackNavigator}
         options={{
           tabBarLabel: ({focused}) => (
@@ -81,11 +81,11 @@ const AppTabNavigator = () => {
         }}
       />
       <AppTab.Screen
-        name="Options"
+        name="OptionsStack"
         component={OptionsStackNavigator}
         options={{
           tabBarLabel: ({focused}) => (
-            <TabText content={t('bottomBarSettings')} focused={focused} />
+            <TabText content={t('Options')} focused={focused} />
           ),
           tabBarIcon: ({focused}) => (
             <TabIcon

@@ -1,21 +1,18 @@
 import React from 'react';
 import Wrapper from '../../components/Wrapper';
 import {Text, TouchableOpacity} from 'react-native';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {OptionsStackParamList} from '../../navigation/AppTabRoutes/OptionsStackNavigator';
+import {navigate} from '../../navigation/RootNavigator';
 
-type Props = NativeStackScreenProps<OptionsStackParamList, 'Options'>;
-
-const Options = ({navigation, route}: Props) => {
+const Options = () => {
   return (
     <Wrapper>
-      <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
-        <Text>Profile</Text>
+      <TouchableOpacity onPress={() => navigate('Profile')}>
+        <Text>Profileee</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate('Rating')}>
+      <TouchableOpacity onPress={() => navigate('Rating')}>
         <Text>Rating</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
+      <TouchableOpacity onPress={() => navigate('Settings')}>
         <Text>Settings</Text>
       </TouchableOpacity>
     </Wrapper>

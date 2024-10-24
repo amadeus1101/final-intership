@@ -9,6 +9,7 @@ import Title from '../../components/Title';
 import Switcher from '../../widgets/Switcher';
 import Wrapper from '../../components/Wrapper';
 import {ScrollView} from 'react-native-gesture-handler';
+import {navigate} from '../../navigation/RootNavigator';
 
 const GameMode = () => {
   const {t} = useTranslation();
@@ -21,7 +22,7 @@ const GameMode = () => {
         </View>
         <View>
           <View style={styles.setting}>
-            <ShadowButton content="10 min" event={() => {}} />
+            <ShadowButton content="10 min" event={() => navigate('TimeMode')} />
           </View>
           <View style={styles.setting}>
             <Title>{t('pieces')}</Title>
@@ -45,7 +46,11 @@ const GameMode = () => {
             <ShadowButton content="+200" event={() => {}} />
           </View>
         </View>
-        <MainButton active content={t('buttonPlay')} onClick={() => {}} />
+        <MainButton
+          active
+          content={t('buttonPlay')}
+          onClick={() => navigate('Game')}
+        />
       </Wrapper>
     </ScrollView>
   );

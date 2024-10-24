@@ -1,4 +1,3 @@
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
 import Options from '../../screens/Options';
@@ -8,6 +7,7 @@ import Rating from '../../screens/Rating';
 import Settings from '../../screens/Settings';
 import HeaderButton from '../components/HeaderButton';
 import {arrow_icon} from '../../assets/img';
+import {goBack} from '../RootNavigator';
 
 export type OptionsStackParamList = {
   Options: undefined;
@@ -19,27 +19,23 @@ export type OptionsStackParamList = {
   Rating: undefined;
 };
 
-type OptionsStackProps = NativeStackScreenProps<
-  OptionsStackParamList,
-  'Options'
->;
-
 const OptionsStack = createStackNavigator<OptionsStackParamList>();
 
-const OptionsStackNavigator = ({navigation, route}: OptionsStackProps) => {
+const OptionsStackNavigator = () => {
   return (
     <OptionsStack.Navigator
       initialRouteName="Options"
       screenOptions={{
         ...stackOptions,
         headerLeft: () => (
-          <HeaderButton
-            source={arrow_icon}
-            onClick={() => navigation.goBack()}
-          />
+          <HeaderButton source={arrow_icon} onClick={() => goBack()} />
         ),
       }}>
-      <OptionsStack.Screen name="Options" component={Options} />
+      <OptionsStack.Screen
+        name="Options"
+        component={Options}
+        options={{headerLeft: undefined}}
+      />
       <OptionsStack.Screen name="Profile" component={Profile} />
       <OptionsStack.Screen name="Rating" component={Rating} />
       <OptionsStack.Screen name="Settings" component={Settings} />
