@@ -6,7 +6,7 @@ import ShadowButton from '../../components/ShadowButton';
 import MainButton from '../../components/MainButton';
 import {styles} from './styles';
 import Title from '../../components/Title';
-import Switcher from '../../widgets/Switcher';
+import Switcher from '../../components/Switcher';
 import Wrapper from '../../components/Wrapper';
 import {ScrollView} from 'react-native-gesture-handler';
 import {navigate} from '../../navigation/RootNavigator';

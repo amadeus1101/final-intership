@@ -26,10 +26,10 @@ const Options = () => {
       <MenuItem image={user_icon} onPress={() => navigate('Profile')}>
         Profile
       </MenuItem>
-      <MenuItem image={eye_icon} onPress={() => navigate('Rating')}>
+      <MenuItem image={eye_icon} onPress={() => {}}>
         Watch Game
       </MenuItem>
-      <MenuItem image={board_icon} onPress={() => navigate('Rating')}>
+      <MenuItem image={board_icon} onPress={() => {}}>
         Themes
       </MenuItem>
       <MenuItem image={bronze_league_icon} onPress={() => {}}>

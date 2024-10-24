@@ -4,7 +4,7 @@ import {ScrollView, View} from 'react-native';
 import MainButton from '../../components/MainButton';
 import {useTranslation} from 'react-i18next';
 import Title from '../../components/Title';
-import Switcher from '../../widgets/Switcher';
+import Switcher from '../../components/Switcher';
 import {styles} from './styles';
 import {goBack} from '../../navigation/RootNavigator';
 

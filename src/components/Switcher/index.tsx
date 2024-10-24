@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {View} from 'react-native';
-import SwitchItem from '../../components/SwitchItem';
+import SwitchItem from '../SwitchItem';
 import {styles} from './styles';
 
 type SwitcherProps = {
