@@ -5,7 +5,7 @@ import {
 import React, {useState} from 'react';
 import Splash from '../screens/Splash';
 import AuthStackNavigator from './AuthStackNavigator';
-import AppTabNavigator from './AppTabNavigator';
+import AppStackNavigator from './AppStackNavigator';
 
 export const navigationRef = createNavigationContainerRef();
 
@@ -39,7 +39,7 @@ const RootNavigator = () => {
 
   return (
     <NavigationContainer ref={navigationRef}>
-      {userToken === null ? <AuthStackNavigator /> : <AppTabNavigator />}
+      {userToken === null ? <AuthStackNavigator /> : <AppStackNavigator />}
     </NavigationContainer>
   );
 };

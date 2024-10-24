@@ -2,23 +2,20 @@ import React from 'react';
 import {Image, ImageSourcePropType, View} from 'react-native';
 import {styles} from './styles';
 import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
+import {arrow_icon} from '../../../assets/img';
 
-type HeaderButtonProps = {
-  source: ImageSourcePropType | undefined;
+type StepBackProps = {
   onClick: () => void;
 };
 
-const HeaderButton: React.FC<HeaderButtonProps> = ({
-  onClick,
-  source = undefined,
-}) => {
+const StepBack: React.FC<StepBackProps> = ({onClick}) => {
   return (
     <TouchableWithoutFeedback onPress={onClick}>
       <View style={styles.container}>
-        <Image source={source} style={styles.image} />
+        <Image source={arrow_icon} style={styles.image} />
       </View>
     </TouchableWithoutFeedback>
   );
 };
 
-export default HeaderButton;
+export default StepBack;
