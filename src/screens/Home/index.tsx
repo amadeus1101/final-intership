@@ -5,12 +5,9 @@ import Wrapper from '../../components/Wrapper';
 import {FlatList} from 'react-native';
 import {styles} from './styles';
 import GameCard from '../../components/GameCard';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {HomeStackParamList} from '../../navigation/AppTabRoutes/HomeStackNavigator';
+import {navigate} from '../../navigation/RootNavigator';
 
-type Props = NativeStackScreenProps<HomeStackParamList, 'Home'>;
-
-const Home = ({navigation, route}: Props) => {
+const Home = () => {
   const {t} = useTranslation();
   return (
     <Wrapper>
@@ -22,7 +19,7 @@ const Home = ({navigation, route}: Props) => {
             title="Game #1"
             subtitle="Bla bla blafghj asdad ad"
             league="silver"
-            onClick={() => navigation.navigate('Game')}
+            onClick={() => navigate('Game')}
             image={undefined}
             league_icon={undefined}
           />
@@ -32,7 +29,7 @@ const Home = ({navigation, route}: Props) => {
       <MainButton
         content={t('buttonPlay')}
         active={true}
-        onClick={() => navigation.navigate('GameMode')}
+        onClick={() => navigate('GameMode')}
       />
     </Wrapper>
 

@@ -1,11 +1,11 @@
 import React from 'react';
 import Wrapper from '../../components/Wrapper';
-import GameCardList from '../../widgets/GameCardList';
+import Title from '../../components/Title';
 
 const Puzzles = () => {
   return (
     <Wrapper>
-      <GameCardList />
+      <Title>Puzzles</Title>
     </Wrapper>
   );
 };
