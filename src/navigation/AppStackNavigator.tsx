@@ -1,6 +1,5 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
-import AppTabNavigator from './HomeTabNavigator';
 import HomeTabNavigator from './HomeTabNavigator';
 import Game from '../screens/Game';
 import GameMode from '../screens/GameMode';

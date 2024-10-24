@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {Image, View} from 'react-native';
 import Header from '../../components/Header';
 import {useTranslation} from 'react-i18next';
 import ShadowButton from '../../components/ShadowButton';
@@ -10,16 +10,17 @@ import Switcher from '../../widgets/Switcher';
 import Wrapper from '../../components/Wrapper';
 import {ScrollView} from 'react-native-gesture-handler';
 import {navigate} from '../../navigation/RootNavigator';
+import {board_icon} from '../../assets/img';
 
 const GameMode = () => {
   const {t} = useTranslation();
   return (
-    <ScrollView>
-      <Wrapper>
-        <View>
-          <View style={styles.preview}></View>
-          <Header>{t('gameTitle')}</Header>
+    <Wrapper>
+      <ScrollView>
+        <View style={styles.preview}>
+          <Image source={board_icon} style={styles.image} />
         </View>
+        <Header>{t('gameTitle')}</Header>
         <View>
           <View style={styles.setting}>
             <ShadowButton content="10 min" event={() => navigate('TimeMode')} />
@@ -46,13 +47,13 @@ const GameMode = () => {
             <ShadowButton content="+200" event={() => {}} />
           </View>
         </View>
-        <MainButton
-          active
-          content={t('buttonPlay')}
-          onClick={() => navigate('Game')}
-        />
-      </Wrapper>
-    </ScrollView>
+      </ScrollView>
+      <MainButton
+        active
+        content={t('buttonPlay')}
+        onClick={() => navigate('Game')}
+      />
+    </Wrapper>
   );
 };
 

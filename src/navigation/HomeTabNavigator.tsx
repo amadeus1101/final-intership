@@ -1,5 +1,5 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import React, {ReactNode} from 'react';
+import React from 'react';
 import TabText from './components/TabText';
 import TabIcon from './components/TabIcon';
 import {useTranslation} from 'react-i18next';
@@ -18,7 +18,6 @@ import Home from '../screens/Home';
 import Puzzles from '../screens/Puzzles';
 import Lessons from '../screens/Lessons';
 import Options from '../screens/Options';
-import {stackStyles} from './stackStyles';
 
 export type HomeTabParamList = {
   Home: undefined;
