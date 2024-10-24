@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   KeyboardAvoidingView,
-  SafeAreaView,
   Text,
   TouchableHighlight,
   View,
@@ -11,7 +10,6 @@ import MainButton from '../../components/MainButton';
 import {styles} from './styles';
 import {useTranslation} from 'react-i18next';
 import Header from '../../components/Header';
-import Alert from '../../components/Alert';
 import Wrapper from '../../components/Wrapper';
 import {signIn} from '../../services/firebase/Auth';
 import {navigate} from '../../services/navigator/Navigator';

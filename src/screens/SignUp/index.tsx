@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {
   Alert,
   KeyboardAvoidingView,
-  SafeAreaView,
   Text,
   TouchableHighlight,
   View,
@@ -12,7 +11,6 @@ import MainButton from '../../components/MainButton';
 import {styles} from './styles';
 import {useTranslation} from 'react-i18next';
 import Header from '../../components/Header';
-import AuthLink from '../../components/Alert';
 import Wrapper from '../../components/Wrapper';
 import {navigate} from '../../services/navigator/Navigator';
 
