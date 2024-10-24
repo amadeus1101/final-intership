@@ -1,5 +1,6 @@
 import {ReactNativeFirebase} from '@react-native-firebase/app';
 import auth, {FirebaseAuthTypes} from '@react-native-firebase/auth';
+import {Alert} from 'react-native';
 
 class Auth {
   signUp = async (email: string, password: string) => {
@@ -13,8 +14,16 @@ class Auth {
   signIn = async (email: string, password: string) => {
     try {
       auth().signInWithEmailAndPassword(email, password);
-    } catch (error) {
-      console.error('Error during sign in:', error);
+    } catch (error: any) {
+      if (error.code === 'auth/wrong-password') {
+        console.error('Неправильный пароль!');
+      } else if (error.code === 'auth/user-not-found') {
+        console.error('Пользователь не найден!');
+      } else if (error.code === 'auth/invalid-email') {
+        console.log('Некорректный email!');
+      } else {
+        console.error('Произошла неизвестная ошибка:', error);
+      }
     }
   };
 

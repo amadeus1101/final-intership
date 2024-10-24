@@ -22,9 +22,10 @@ const App = () => {
   }, []);
 
   if (loading) return <Splash />;
+
   return (
     <NavigationContainer ref={navigationRef}>
-      {user === null ? <AuthStackNavigator /> : <AppStackNavigator />}
+      {!user ? <AuthStackNavigator /> : <AppStackNavigator />}
     </NavigationContainer>
   );
 };

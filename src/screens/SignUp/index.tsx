@@ -24,7 +24,7 @@ const SignUp = () => {
   return (
     <Wrapper>
       <View style={styles.container}>
-        <KeyboardAvoidingView style={styles.form}>
+        {/* <KeyboardAvoidingView style={styles.form}>
           <Header>{t('welcome')}</Header>
           <Input isSecret={true} placeholder={t('login')} />
           <Input isSecret={true} placeholder={t('password')} />
@@ -40,7 +40,7 @@ const SignUp = () => {
               <Text style={[styles.text, styles.link]}>Sign In</Text>
             </TouchableHighlight>
           </View>
-        </KeyboardAvoidingView>
+        </KeyboardAvoidingView> */}
       </View>
     </Wrapper>
   );
